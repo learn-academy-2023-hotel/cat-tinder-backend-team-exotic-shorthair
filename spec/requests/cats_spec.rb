@@ -88,19 +88,11 @@ RSpec.describe "Cats", type: :request do
       post '/cats', params: cat_params
       cat = Cat.first
 
-      deleted_params = {
-        cat: {
-          name: 'Buster',
-          age: 4,
-          enjoys: 'Meow mix, and plenty of sunshine.',
-          image: 'https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80'
-        }
-      }
-
       delete "/cats/#{cat.id}"
 
+      deleted_cat = Cat.find_by(id: cat.id)
       expect(response).to have_http_status(200)
-      expect(Cat.count).to eq 0
+      expect(deleted_cat).to be_nil
 
     end
   end
