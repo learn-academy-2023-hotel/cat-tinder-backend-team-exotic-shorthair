@@ -12,6 +12,7 @@ class CatsController < ApplicationController
         else
             render json: cat.errors, status: 422
         end
+        render json: cat
     end
     
     def update

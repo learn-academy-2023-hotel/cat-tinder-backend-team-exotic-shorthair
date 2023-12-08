@@ -38,12 +38,3 @@ end
 
 
 
-# it "should validate enjoys if it has at least 10 characters" do
-#   cat = Cat.create(enjoys: 'Long walks on the beach')
-#   expect(cat).to be_valid
-# end
-
-# it "should invalidate enjoys if it does not have at least 10 characters" do
-#   cat = Cat.create(enjoys: 'Long walks')
-#   expect(cat.errors[:enjoys]).to include("is too short (minimum 10 characters)")
-# end
