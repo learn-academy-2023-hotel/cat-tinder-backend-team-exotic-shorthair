@@ -23,3 +23,5 @@ cats.each do |cat|
     Cat.create cat
     puts "creating cat #{cat}"
 end
+
+
