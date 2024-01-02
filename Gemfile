@@ -69,3 +69,8 @@ gem "rspec-rails", "~> 6.1"
 
 gem "rack-cors", :require => "rack/cors"
 
+
+gem "devise", "~> 4.9"
+
+gem 'devise-jwt'
+
